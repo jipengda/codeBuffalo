@@ -1,3 +1,6 @@
+import graphene
+import requests
+
 class Query(graphene.ObjectType):
   r = requests.get('http://www.boredapi.com/api/activity/')
   #myactivity = 
