@@ -34,6 +34,15 @@ class databaseConnection:
             f"UPDATE activity_attribute_ref SET activity_has_attribute = {truth} WHERE activity_key = {activity_key} AND attribute_id = {attribute_id}")
         self.connection.commit()
     
+    def checkAttribute(self, activity_key, attribute):
+        attribute_id = self.addOrGetAttribute(attribute)
+        self.cursor.execute(
+        f"SELECT activity_has_attribute FROM activity_attribute_ref WHERE activity_key = {activity_key} AND attribute_id = {attribute_id}")
+        result = list(self.cursor)
+        if not result:
+            return None
+        return result[0][0] != 0
+
     
 
 
