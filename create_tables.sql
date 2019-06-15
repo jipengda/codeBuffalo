@@ -6,5 +6,6 @@ attribute_text VARCHAR(255) UNIQUE
 CREATE TABLE activity_attribute_ref(
 activity_key INT NOT NULL,
 attribute_id INT NOT NULL REFERENCES activity_attribute(attribute_id),
-activity_has_attribute BOOLEAN NOT NULL
+activity_has_attribute BOOLEAN NOT NULL,
+PRIMARY KEY(activity_key, attribute_id)
 );
