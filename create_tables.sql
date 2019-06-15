@@ -1,6 +1,6 @@
 CREATE TABLE activity_attribute(
 attribute_id INT AUTO_INCREMENT PRIMARY KEY,
-attribute_text VARCHAR(255)
+attribute_text VARCHAR(255) UNIQUE
 );
 
 CREATE TABLE activity_attribute_ref(
