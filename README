@@ -10,8 +10,10 @@ user whether these reasons apply to other activities and create a basic expert
 system out of the resulting data. Getting the graphql to work took up all of
 our time, and we didn't get to use it. The interface is in mysqlinterface.py.
 
+Option1:
 Put 1.glade and main.py in the same folder and run main.py from the command
 line: python main.py
 
 Option2:
-You can also just run file named "Soultion1.py" in python 3.7 or newer version to get project worked.
+You can also just run single file named "Soultion1.py" in python 3.7.2 or newer version to get project worked.
+line: python Solution1.py
