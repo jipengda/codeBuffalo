@@ -1,4 +1,5 @@
 import mysql.connector
+import graphene
 
 class databaseConnection:
     def __init__(self, user, password, host, database):
@@ -43,6 +44,48 @@ class databaseConnection:
             return None
         return result[0][0] != 0
 
-    
+class Opinion(graphene.ObjectType):
+    attribute = graphene.String()
+    ideaKey = graphene.String()
+    hasOpinion = graphene.Boolean()
+    opinionValue = graphene.Boolean()
+
+class QueryOpinion(graphene.ObjectType):
+    opinion = graphene.Field(Opinion)
+    def resolve_opinion(self, info):
+        idea_key = info.context['idea_key']
+        attribute = info.context['attribute']
+        mysqlLink = databaseConnection('team32_user', 'bron is life', '35.238.128.54', 'team32_db') # TODO: un-hardcode credentials
+        result = mysqlLink.checkAttribute(int(idea_key), attribute)
+        del mysqlLink
+        has_opinion = result is not None
+        opinion_value = result == 1
+        return Opinion(attribute = attribute,
+                ideaKey = idea_key,
+                hasOpinion = has_opinion,
+                opinionValue = opinion_value)
+
+class MutateOpinion(graphene.Mutation):
+    class Arguments:
+        ideaKey = graphene.String()
+        attribute = graphene.String()
+        opinionValue = graphene.Boolean()
+
+    ok = graphene.Boolean()
+
+    def mutate(root, info, ideaKey, attribute, opinionValue):
+        mysqlLink = databaseConnection('team32_user', 'bron is life', '35.238.128.54', 'team32_db') # TODO: un-hardcode credentials
+        attribute_id = mysqlLink.addOrGetAttribute(attribute)
+        mysqlLink.setAttribute(int(ideaKey), attribute_id, opinionValue)
+        del mysqlLink
+        opinion = Opinion(attribute = attribute,
+                ideaKey = ideaKey,
+                hasOpinion = True,
+                opinionValue = opinionValue)
+        ok = True
+        return MutateOpinion(ok=ok)
+        
+class Mutation(graphene.ObjectType):
+    mutate_opinion = MutateOpinion.Field()
 
 
