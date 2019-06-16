@@ -12,3 +12,6 @@ our time, and we didn't get to use it. The interface is in mysqlinterface.py.
 
 Put 1.glade and main.py in the same folder and run main.py from the command
 line: python main.py
+
+Option2:
+You can also just run file named "Soultion1.py" in python 3.7 or newer version to get project worked.
