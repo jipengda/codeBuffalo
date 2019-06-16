@@ -3,4 +3,12 @@ Python 3
 Graphene https://docs.graphene-python.org/en/latest/quickstart/
 MySQL Connector/Python https://dev.mysql.com/doc/connector-python/en/connector-python-introduction.html
 
-We built a small schema in mysql and enabled a graphql interface for it. The intention was to collect additional preference data, allowing the user to reject our activity suggestion, and specify why. We would then have asked the user whether these reasons apply to other activities and create a basic expert system out of the resulting data. Getting the graphql to work took up all of our time, and we didn't get to use it.
+We built a small schema in mysql and enabled a graphql interface for it. The
+intention was to collect additional preference data, allowing the user to
+reject our activity suggestion, and specify why. We would then have asked the
+user whether these reasons apply to other activities and create a basic expert
+system out of the resulting data. Getting the graphql to work took up all of
+our time, and we didn't get to use it. The interface is in mysqlinterface.py.
+
+Put 1.glade and main.py in the same folder and run main.py from the command
+line: python main.py
