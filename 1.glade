@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkListStore" id="liststore1">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Education</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Recreational</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Social</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">DIY</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Charity</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Cooking</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Relaxation</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Music</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Busywork</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkWindow" id="Main">
+    <property name="can_focus">False</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="width_request">616</property>
+        <property name="height_request">433</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkStack" id="stack1">
+            <property name="width_request">592</property>
+            <property name="height_request">365</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkFixed">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkButton" id="button">
+                    <property name="label" translatable="yes">Hit Me Now</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="on_button_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">284</property>
+                    <property name="y">13</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="text">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Activity you should do </property>
+                  </object>
+                  <packing>
+                    <property name="x">280</property>
+                    <property name="y">209</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page0</property>
+                <property name="title" translatable="yes">RANDOM</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkEntry" id="price1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">250</property>
+                    <property name="y">125</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_price">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Price[0-1]</property>
+                  </object>
+                  <packing>
+                    <property name="x">120</property>
+                    <property name="y">132</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_accessibility">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Accessibility[0-1]</property>
+                  </object>
+                  <packing>
+                    <property name="x">120</property>
+                    <property name="y">163</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="access1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">250</property>
+                    <property name="y">158</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="final">
+                    <property name="label" translatable="yes">Fill that up
+Hit me</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="on_final_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">260</property>
+                    <property name="y">203</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="price2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">452</property>
+                    <property name="y">125</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="access2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">452</property>
+                    <property name="y">158</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkSpinButton" id="spin1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="text" translatable="yes">2</property>
+                    <property name="adjustment">adjustment1</property>
+                    <property name="value">2</property>
+                  </object>
+                  <packing>
+                    <property name="x">250</property>
+                    <property name="y">85</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_numberparticipants">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes"># Participants</property>
+                  </object>
+                  <packing>
+                    <property name="x">120</property>
+                    <property name="y">91</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBox" id="combo1">
+                    <property name="width_request">241</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="model">liststore1</property>
+                    <property name="has_entry">True</property>
+                    <property name="entry_text_column">0</property>
+                    <child internal-child="entry">
+                      <object class="GtkEntry" id="comboentry">
+                        <property name="can_focus">True</property>
+                        <property name="placeholder_text" translatable="yes">Lets narrow it down</property>
+                        <signal name="changed" handler="on_entry1_changed" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">120</property>
+                    <property name="y">50</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label2">
+                    <property name="width_request">218</property>
+                    <property name="height_request">42</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="x">218</property>
+                    <property name="y">308</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page1</property>
+                <property name="title" translatable="yes">PREFERENCE</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">50</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStackSwitcher" id="ss1">
+            <property name="width_request">-1</property>
+            <property name="height_request">43</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="stack">stack1</property>
+          </object>
+          <packing>
+            <property name="x">264</property>
+            <property name="y">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
